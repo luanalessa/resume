@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../components/Modal'
 
 import * as S from './styles'
 import { ReactComponent as Room} from '../assets/image/room.svg'
@@ -42,9 +43,13 @@ import Paint from '../assets/image/paint.png'
 
 
 export default function Home(){
+    const [modal, setModal] = useState(false)
 
     return (
                 <S.Container>
+                    { modal && (
+                        <Modal setModal={setModal}>
+                     </Modal>)}
                     <Room className='component' />
                     <S.Left>
                         <Painel className='painel' />
@@ -58,7 +63,9 @@ export default function Home(){
                     </S.Left>
                     <S.Center>
                         <Boards className='boards' />
-                        <Computer className='computer' />
+                        <Computer className='computer'  
+                            onClick={() => setModal(true)}
+                        />
                     </S.Center>
                     <S.Right>
                         <S.Shelf>
