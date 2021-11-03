@@ -1,48 +1,42 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background: none;
+ 
   margin: 0 auto;
  
-  width: 1600px;
+  width: 1200px;
   height: 600px;
-  max-width: 100vw;
 
 
 `
 
 export const Left = styled.div`
-  background: white;
+  /* background: white; */
 
   width: 360px;
   height: 400px;
 
-  position: absolute;
+  position: relative;
+  float: left;
   z-index: 3;
 
-  top: 100px;
-  left: 145px;
-
-
+  margin-top:100px;
 
 
 `
 
 export const Center = styled.div`
-  background: green;
+  /* background: green; */
 
   width: 360px;
   height: 400px;
-  z-index: 1;
-  position: relative;
+
+
   position: absolute;
+  z-index: 3;
 
-  top: 100px;
-
+  margin-top:100px;
+  margin-left: 400px;
 
   .boards{
     width: 210px;
@@ -80,7 +74,10 @@ export const Right = styled.div`
   width: 360px;
   height: 400px;
 
-  z-index: 2;
+  position: absolute;
+  z-index: 3;
+  margin-top:100px;
+  margin-left: 800px;
 
 
   .paint{
