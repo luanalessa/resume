@@ -12,6 +12,8 @@ export default createGlobalStyle`
         background: linear-gradient(180deg, #385B94 0%, #273767 100%);
         background-size: cover;
         
+        font-family: 'Poppins', sans-serif;
+
         .component{
             width: 1200px;
             height: 600px;

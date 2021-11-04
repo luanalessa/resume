@@ -27,7 +27,6 @@ export const ModalContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  font-family: 'Poppins', sans-serif;
 
 
   margin: 30px auto;
@@ -71,7 +70,7 @@ export const Header = styled.div`
 `
 
 export const Label = styled.label`
-    width: 80px;
+    width: auto;
     height: 40px;
     color: #fff;
 

@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 import desktop from '../../assets/image/desktop-bg.png'
-import cv from '../../assets/image/cv.svg'
-
 
 export const Content = styled.div`
   width: 874px;
@@ -13,16 +11,8 @@ export const Content = styled.div`
   background-size: cover;
   
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  z-index: 140;
-`
-export const Icon = styled.div`
-    width: 60px;
-    height: 0px;
-    cursor: pointer;
-    background-size: cover;
-
-    
-  
+  z-index: 14;
 `

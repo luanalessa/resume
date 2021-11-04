@@ -1,23 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 import * as S from './styles'
+import DesktopIcon from '../DesktopIcons'
+import Window from '../Window'
 
-import { ReactComponent as CV } from '../../assets/image/cv.svg'
-import { ReactComponent as Folder } from '../../assets/image/folder.svg'
+export default function Desktop() {
+  const [projectWindow, setProjectWindow] = useState(true)
+  // const [resumeWindow, setResumeWindow] = useState(false)
 
-export default function Desktop({ setModal, children }) {
-  
     return (
             <S.Content>
-              <S.Icon className='folder' key='icon folder'>
-                <Folder /><label>Projects</label>
-              </S.Icon>
-
-              <S.Icon className='cv'>
-                <CV />
-                <label>CV</label>
-              </S.Icon>
-            
+            { projectWindow && (
+                <Window setModal={setProjectWindow} title="Projects"></Window>)
+            }
+              <DesktopIcon 
+                className='chickable'
+                icon = 'folder'
+                title='Projects'
+              />
+              <DesktopIcon 
+                className='chickable'
+                icon = 'folder'
+                title=' Working on'
+              />
+              <DesktopIcon 
+                className='chickable'
+                icon = 'cv'
+                title=' Resume'
+              />              
             </S.Content>
     )
   }

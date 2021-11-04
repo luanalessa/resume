@@ -1,7 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react' 
 
 import * as S from './styles'
 import Desktop from '../Desktop'
+import Clock from '../Clock'
+
 
 export default function Modal({ setModal, children }) {
     const modalRef = useRef()
@@ -15,7 +17,9 @@ export default function Modal({ setModal, children }) {
         <S.ModalContainer>
             <S.Header> 
                 <S.Label>Activities</S.Label>
-                <S.Label>nove 7 10:30</S.Label>
+                <S.Label>
+                  <Clock/>
+                </S.Label>
                 <S.Label >
                 <i onClick={() => setModal(false)} className='bx bx-power-off' ></i></S.Label>
             </S.Header>
@@ -25,7 +29,7 @@ export default function Modal({ setModal, children }) {
                     <S.Icons className='chickable chrome'/>
                     <S.Icons className='menu'/>
                 </S.Menu>
-                <Desktop />
+                  <Desktop />
             </S.Content>
         </S.ModalContainer>
       </S.BackgroundContainer>
