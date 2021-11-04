@@ -21,7 +21,7 @@ export const BackgroundContainer = styled.div`
 
 export const ModalContainer = styled.div`
   width: 874px;
-  height: 490px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -45,12 +45,13 @@ export const ModalContainer = styled.div`
 
 export const Content = styled.div`
   width: 874px;
-  height: 490px;
+  height: 100%;
 
   background: white;
   display: flex;
   border-radius: 0 0 5px 5px ;
   position: relative;
+
 `
 
 export const Header = styled.div`
@@ -65,6 +66,7 @@ export const Header = styled.div`
     align-items:center;
     text-align: center;
 
+    margin-bottom: 0px;
     padding: 10px;
 
 `

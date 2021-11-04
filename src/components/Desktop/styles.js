@@ -4,7 +4,7 @@ import desktop from '../../assets/image/desktop-bg.png'
 
 export const Content = styled.div`
   width: 874px;
-  height: 490px;
+  height: 100%;
 
   background-image: url(${desktop});
   background-position: center;
@@ -15,4 +15,5 @@ export const Content = styled.div`
   flex-direction: column;
   position: relative;
   z-index: 14;
+
 `

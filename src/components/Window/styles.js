@@ -9,10 +9,10 @@ export const Content = styled.div`
   
   display: flex;
   flex-wrap: wrap;
-  position: relative;
+  position: absolute;
   justify-content: flex-start;
   align-content: flex-start;
-  z-index: 14;
+  z-index: 16;
 `
 
 export const Header = styled.div`
@@ -23,23 +23,33 @@ export const Header = styled.div`
   
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
 
-  padding: 5px 10px;
+ 
  
 `
 
 export const Label = styled.label`
     width: auto;
-    height: 40px;
+    height: 30px;
     color: #fff;
 
+    
     font-size: 12px;
-    line-height: 22px;
 
-    .bx-power-off{
-        font-size: 20px;
-        cursor: pointer;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .btn{
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    
+    .close{
+      width: 14px;
+      height: 14px;
     }
 
 `

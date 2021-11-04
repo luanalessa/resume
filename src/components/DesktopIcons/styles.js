@@ -32,7 +32,6 @@ export const IconDesktop = styled.div`
     margin: 20px;
     cursor: pointer;
 
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

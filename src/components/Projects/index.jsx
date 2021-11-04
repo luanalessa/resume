@@ -3,38 +3,52 @@ import React from 'react'
 import * as S from './styles'
 import DesktopIcon from '../DesktopIcons'
 
-export default function Projects() {
+export default function Projects({disabled}) {
 
     return (
             <S.Content>
               <DesktopIcon 
                 className='chickable dark'
                 icon = 'folder'
-                title=' Animalandia'/> 
+                title=' Animalandia'
+                disabled={disabled}
+                /> 
               <DesktopIcon 
                 className='chickable dark'
                 icon = 'folder'
-                title=' Eventin'/> 
+                title=' Eventin'
+                disabled={disabled}
+                /> 
               <DesktopIcon 
                 className='chickable dark'
                 icon = 'folder'
-                title=' Alphaflix'/>
+                title=' Alphaflix'
+                disabled={disabled}
+                />
               <DesktopIcon 
                 className='chickable dark'
                 icon = 'folder'
-                title=' Genius 1.0'/>
+                title=' Genius 1.0'
+                disabled={disabled}
+                />
               <DesktopIcon 
                 className='chickable dark'
                 icon = 'folder'
-                title=' Github Explorer'/>
+                title=' Github Explorer'
+                disabled={disabled}
+                />
                <DesktopIcon 
                 className='chickable dark'
                 icon = 'folder'
-                title=' Alphapet'/>
+                title=' Alphapet'
+                disabled={disabled}
+                />
                <DesktopIcon 
                 className='chickable dark'
                 icon = 'folder'
-                title=' Alphashoes'/>
+                title=' Alphashoes'
+                disabled={disabled}
+                />
             </S.Content>
     )
   }

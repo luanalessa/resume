@@ -12,7 +12,7 @@ export const Content = styled.div`
   position: relative;
   justify-content: flex-start;
   align-content: flex-start;
-  z-index: 14;
+  z-index: 15;
 `
 
 export const Header = styled.div`
