@@ -43,3 +43,15 @@ export const Label = styled.label`
     }
 
 `
+
+export const Link = styled.a`
+  text-decoration: none;
+
+  &:visited{
+    text-decoration: none;
+  }
+
+  &:active{
+    text-decoration: none;
+  }
+`

@@ -3,10 +3,12 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   width: 574px;
-  height: 390px;
+  height: auto;
 
   background: #fff;
+  box-shadow: 1px 1px 6px #b1b1b16e;
   
+  margin: 10px 10px;
   display: flex;
   flex-wrap: wrap;
   position: absolute;

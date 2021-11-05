@@ -29,7 +29,9 @@ export const IconDesktop = styled.div`
     font-size: 14px;
     
 
-    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin: 10px 5px 25px 5px ;
     cursor: pointer;
 
     display: flex;

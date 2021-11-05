@@ -166,7 +166,7 @@ export const Right = styled.div`
   .linux{
     width: 30px;
     height: 40px;
-    margin-top: 12px;
+    margin-top: 10px;
     margin-left: 20px;
 
     cursor: pointer;
@@ -183,16 +183,27 @@ export const Shelf = styled.div`
 
   /* background-color: white; */
 
-  margin: 10px;
+  margin: 10px 5px;
 
   display: flex;
   flex-wrap: wrap;  
 
-  &.books, &.social-midia{
+  &.books{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
+
+    margin: 10px 5px;
+
+  }
+
+  &.social-midia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 25px;
 
   }
 

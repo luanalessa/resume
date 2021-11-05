@@ -16,7 +16,7 @@ export default function Window({setModal, title, component}) {
 
     return (
       <Draggable bounds='parent'
-      defaultPosition={{x: 100, y: 20}}>
+        defaultPosition={{x: 100, y: 20}}>
             <S.Content>
               <S.Header>
                 <S.Label>{title}</S.Label>

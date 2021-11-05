@@ -9,9 +9,6 @@ export default function Desktop() {
   const [navigateProjects, setNavigateProjects] = useState(false)
   const [navigateWorkingOn, setNavigateWorkingOn] = useState(false)
  
-
-  // const [resumeWindow, setResumeWindow] = useState(false)
-
     return (
             <S.Content>
             { navigateProjects && (
