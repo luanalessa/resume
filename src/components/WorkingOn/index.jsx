@@ -33,8 +33,10 @@ const projects = [
 
 export default function WorkingOn({disabled}) {
   const [navigateFolder, setNavigateFolder] = useState(false)
+  
+  console.log(navigateFolder)
 
-    return (
+  return (
             <S.Content>
               {projects.map(p => (
               <S.Link 

@@ -1,12 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import * as S from './styles'
 import Desktop from '../Desktop'
 import Clock from '../Clock'
 
 export default function Computer({ setModal, children }) {
-    const [navigateChrome, setNavigateChrome] = useState(false)
-
     return (
         <S.ModalContainer>
             <S.Header> 

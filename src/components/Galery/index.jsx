@@ -20,7 +20,7 @@ import polaroid8 from '../../assets/image/pictures/fortaleza.jpeg'
 const pictures = [
   {
     src: polaroid1,
-    title:'Dia das crianças',
+    title:'Contação de histórias',
     legend: '@coletivodonzelinha'
   },
   {
