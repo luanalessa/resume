@@ -5,12 +5,12 @@ import Polaroid from '../Polaroid'
 
 import polaroid1 from '../../assets/image/pictures/coletivo-1.jpeg'
 import polaroid3 from '../../assets/image/pictures/coletivo-3.png'
-import polaroid4 from '../../assets/image/pictures/coletivo-4.png'
+import polaroid4 from '../../assets/image/pictures/coletivo-4.jpeg'
 
 import polaroid5 from '../../assets/image/pictures/projeto-sou-da-paz.jpg'
 
 import polaroid6 from '../../assets/image/pictures/agentes-da-alegria-1.jpg'
-import polaroid7 from '../../assets/image/pictures/agentes-da-alegria-2.jpg'
+import polaroid7 from '../../assets/image/pictures/agentes-da-alegria-2.jpeg'
 
 import polaroid8 from '../../assets/image/pictures/fortaleza.jpeg'
 

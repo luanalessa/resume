@@ -1,11 +1,27 @@
 import styled from 'styled-components'
-
+import joker from '../assets/image/pictures/coringa.jpeg'
 export const Container = styled.div`
  
   margin: 0 auto;
  
   width: 1200px;
   height: 600px;
+
+  
+
+`
+
+export const Painting = styled.div`
+  
+  width: 400px;
+  height: 500px;
+
+  background-image: url(${joker});
+  background-size: cover;
+
+  border: solid 20px #fff;
+
+  margin-top: 30px;
 
 
 `
@@ -44,53 +60,83 @@ export const Left = styled.div`
     z-index: 4;
 
     cursor: pointer;
+    &.clickable:hover{
+    position: relative;
+    animation: treme 0.4s;
+    animation-iteration-count: 2;
+    }
+
+    @keyframes treme {
+      0% {margin-left: 0;}
+      25% {margin-left: 2px;}
+      50% {margin-left: 0;}
+      75% {margin-left: -2px;}
+      100% {margin-left: 0;}
+    }
+       
+    
   }
 
   .p-one{
-    top: 5px;
+    bottom: 20px;
     left: 10px;
   }
 
   .p-two{
-    bottom: 25px;
+    bottom: 35px;
     left: 24px;
   }
 
   .p-three{
     left: 34px;
+    bottom: 55px;
+
   }
 
   .p-four{
-    top: 30px;
-    right: 60px;
+    top: 0px;
+    right: 20px;
   }
 
   .p-five{
-    top: 50px;
+    top: 30px;
     right: 10px;
   }
 
   .note{
     width: 65px;
     height: auto;
-    position: relative;
+    position: absolute;
     z-index: 4;
 
-    top: 36px;
-    right: 5px;
+    top: 216px;
+    right: 90px;
 
     cursor: pointer;
+
+    &.clickable:hover{
+    animation: treme 0.4s;
+    animation-iteration-count: 2;
+    }
+
+    @keyframes treme {
+      0% {margin-left: 0;}
+      25% {margin-left: 2px;}
+      50% {margin-left: 0;}
+      75% {margin-left: -2px;}
+      100% {margin-left: 0;}
+    }
   }
 
   .coffee{
     width: 36px;
     height: auto;
-    position: relative;
+    position: absolute;
 
     z-index: 4;
 
-    top: 79px;
-    right: 35px;
+    top: 301px;
+    right: 89px;
 
     cursor: pointer;
   }
@@ -116,16 +162,14 @@ export const Center = styled.div`
     margin-top: 10px;
     margin-left: 75px;
 
+    position: absolute;
     cursor: pointer;
 
-    &:hover{
-
-    }
   }
   .computer{
     width: 140px;
     height: auto;
-    margin-top: 20px;
+    margin-top: 145px;
     margin-left: 85px;
 
     cursor: pointer;
@@ -157,8 +201,16 @@ export const Right = styled.div`
     margin-top: -35px;
     cursor: pointer;
     
-    &:hover{
+    &.clickable:hover{
+      animation: rotation 0.3s;
+    }
 
+    @keyframes rotation {
+      0% {transform: rotateZ(0deg);}
+      25% {transform: rotateZ(5deg);}
+      50% {transform: rotateZ(10deg)}
+      75% {transform: rotateZ(5deg)}
+      100% {transform: rotateZ(0deg)}
     }
 
   }
@@ -168,12 +220,9 @@ export const Right = styled.div`
     height: 40px;
     margin-top: 10px;
     margin-left: 20px;
-
+    position: absolute;
     cursor: pointer;
     
-    &:hover{
-
-    }
   }
 `
 
@@ -196,6 +245,8 @@ export const Shelf = styled.div`
 
     margin: 10px 5px;
 
+    
+
   }
 
   &.social-midia{
@@ -204,16 +255,22 @@ export const Shelf = styled.div`
     justify-content: center;
 
     margin-top: 25px;
-
-  }
-
-  .book, .social{
-    cursor: pointer;
     
-    &:hover{
+    .clickable:hover{
+    position: relative;
+    animation: treme 0.4s;
+    animation-iteration-count: 2;
+    }
 
+    @keyframes treme {
+      0% {margin-top: 0;}
+      25% {margin-top: 2px;}
+      50% {margin-top: 0;}
+      75% {margin-top: -2px;}
+    100% {margin-top: 0;}
     }
   }
+
 
   .zero {
     width: auto;
@@ -280,3 +337,4 @@ export const Shelf = styled.div`
     margin: 0 5px;  
   }
 `
+

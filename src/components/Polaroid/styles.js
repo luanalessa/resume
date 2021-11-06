@@ -48,7 +48,7 @@ export const Title = styled.span`
   width: 330px;
 
   text-align: center;
-  font-size: 25px;
+  font-size: 24px;
   color: #0B1020;
 
   margin-top: 20px;

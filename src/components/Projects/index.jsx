@@ -64,7 +64,6 @@ export default function Projects({disabled}) {
                   title={p.title}
                   disabled={disabled}
                   onOpen={setNavigateFolder}
-                  key={navigateFolder}
                 /> 
               </S.Link>  
             ))}

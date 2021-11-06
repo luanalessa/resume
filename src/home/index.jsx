@@ -41,7 +41,7 @@ import { ReactComponent as Polaroid5} from '../assets/image/icons/polaroid-five.
 
 
 
-import Paint from '../assets/image/icons/paint.png'
+import joker from '../assets/image/icons/paint.png'
 
 
 
@@ -55,7 +55,8 @@ export default function Home(){
                     { modal && (
                         <Modal setModal={setModal} type='Computer'>
                            { type ==='Computer' ? (<Computer setModal={setModal}/>) : null}
-                           { type ==='Galery' ? (<Galery setModal={setModal}/>):null}
+                           { type ==='Galery' ? (<Galery setModal={setModal}/>) : null}
+                           { type ==='Painting' ? (<S.Painting/>) : null}
 
                         </Modal>)}
                                 
@@ -66,39 +67,39 @@ export default function Home(){
                             onClick={() => {
                                 setType('Galery')
                                 setModal(true)}}
-                            className='polaroid p-zero' 
+                            className='polaroid p-one clickable' 
                         />
                         <Polaroid2 
                             onClick={() => {
                                 setType('Galery')
                                 setModal(true)}}
-                                className='polaroid p-one' 
+                                className='polaroid p-two clickable' 
                         />
                         <Polaroid3 
                             onClick={() => {
                                 setType('Galery')
                                 setModal(true)}}
-                                className='polaroid p-two' 
+                                className='polaroid p-three clickable' 
                         />
                         <Polaroid4 
                             onClick={() => {
                                 setType('Galery')
                                 setModal(true)}}
-                                className='polaroid p-three' 
+                                className='polaroid p-four clickable' 
                         />
                         <Polaroid5 
                             onClick={() => {
                                 setType('Galery')
                                 setModal(true)}}                            
-                            className='polaroid p-four' 
+                            className='polaroid p-five clickable' 
                         />
                             
-                        <a href='https://www.buymeacoffee.com/luanalessa' rel='noreferrer' target='_blank' ><Note className='note' />
-                        <Coffee className='coffee' /></a>
+                        <a href='https://www.buymeacoffee.com/luanalessa' rel='noreferrer' target='_blank' ><Note className='note clickable' />
+                        <Coffee className='coffee clickable' /></a>
                     </S.Left>
                     <S.Center>
-                        <Boards className='boards' />
-                        <Monitor className='computer'  
+                        <Boards className='boards clickable' />
+                        <Monitor className='computer clickable'  
                             onClick={() => {
                                 setType('Computer')
                                 setModal(true)}}
@@ -106,10 +107,17 @@ export default function Home(){
                     </S.Center>
                     <S.Right>
                         <S.Shelf>
-                            <img src={Paint} alt='' className='paint' />
+                            <img 
+                                src={joker} 
+                                alt='' 
+                                className='paint clickable'
+                                onClick={() => {
+                                    setType('Painting')
+                                    setModal(true)}}
+                                />
                         </S.Shelf>
                         <S.Shelf>
-                            <Linux className='linux' />
+                        <a href='https://ubuntu.com/download' rel='noreferrer' target='_blank' ><Linux className='linux clickable' /></a>
                         </S.Shelf>
                         <S.Shelf className='books'>
                             <Book0 className='book zero'/>
@@ -128,9 +136,9 @@ export default function Home(){
                             <Book13 className='book thirteen'/> 
                         </S.Shelf>
                         <S.Shelf className='social-midia'>
-                            <a href='https://www.linkedin.com/in/luanalessa' rel='noreferrer' target='_blank' ><Linkedin className='social icon' /></a>
-                            <a href='https://github.com/luanalessa' rel='noreferrer' target='_blank' ><GitHub className='social icon' /></a>
-                            <a href='https://www.instagram.com/lessalsn' rel='noreferrer' target='_blank' ><Instagram className='social icon' /></a>
+                            <a className='' href='https://www.linkedin.com/in/luanalessa' rel='noreferrer' target='_blank' ><Linkedin className='social icon clickable' /></a>
+                            <a href='https://github.com/luanalessa' rel='noreferrer' target='_blank' ><GitHub className='social icon clickable' /></a>
+                            <a href='https://www.instagram.com/lessalsn' rel='noreferrer' target='_blank' ><Instagram className='social icon clickable' /></a>
                         </S.Shelf>
                         </S.Right>
                 </S.Container>
