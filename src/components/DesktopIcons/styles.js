@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import folder from '../../assets/image/folder.png'
-import cv from '../../assets/image/cv.png'
+import folder from '../../assets/image/icons/folder.png'
+import cv from '../../assets/image/icons/cv.png'
 
 export const Icon = styled.div`
     width: 50px;

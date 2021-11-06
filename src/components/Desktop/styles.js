@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import desktop from '../../assets/image/desktop-bg.png'
+import desktop from '../../assets/image/icons/desktop-bg.png'
 
 export const Content = styled.div`
   width: 874px;

@@ -1,70 +1,107 @@
 import React, { useState } from 'react'
 import Modal from '../components/Modal'
+import Galery from '../components/Galery'
+
+import Computer from '../components/Computer'
 
 import * as S from './styles'
-import { ReactComponent as Room} from '../assets/image/room.svg'
+import { ReactComponent as Room} from '../assets/image/icons/room.svg'
 
-import { ReactComponent as Computer} from '../assets/image/computer.svg'
-import { ReactComponent as Boards} from '../assets/image/boards.svg'
-import { ReactComponent as Linux} from '../assets/image/linux.svg'
+import { ReactComponent as Monitor} from '../assets/image/icons/computer.svg'
+import { ReactComponent as Boards} from '../assets/image/icons/boards.svg'
+import { ReactComponent as Linux} from '../assets/image/icons/linux.svg'
 
-import { ReactComponent as Book0} from '../assets/image/got.svg'
-import { ReactComponent as Book1} from '../assets/image/mundo-de-sofia.svg'
-import { ReactComponent as Book2} from '../assets/image/as-intermitencias-da-morte.svg'
-import { ReactComponent as Book3} from '../assets/image/o-codigo-da-vinci.svg'
-import { ReactComponent as Book4} from '../assets/image/mulheres-que-correm-com-os-lobos.svg'
-import { ReactComponent as Book5} from '../assets/image/o-pequeno-principe.svg'
-import { ReactComponent as Book6} from '../assets/image/o-mal-estar-da-cultura.svg'
-import { ReactComponent as Book7} from '../assets/image/um-ensaio-sobre-a-cegueira.svg'
-import { ReactComponent as Book8} from '../assets/image/o-extraordinario.svg'
-import { ReactComponent as Book9} from '../assets/image/o-quinze.svg'
-import { ReactComponent as Book10} from '../assets/image/uma-breve-historia-do-tempo.svg'
-import { ReactComponent as Book11} from '../assets/image/o-universo-numa-casca-de-noz.svg'
-import { ReactComponent as Book12} from '../assets/image/frida.svg'
-import { ReactComponent as Book13} from '../assets/image/sapiens.svg'
+import { ReactComponent as Book0} from '../assets/image/icons/got.svg'
+import { ReactComponent as Book1} from '../assets/image/icons/mundo-de-sofia.svg'
+import { ReactComponent as Book2} from '../assets/image/icons/as-intermitencias-da-morte.svg'
+import { ReactComponent as Book3} from '../assets/image/icons/o-codigo-da-vinci.svg'
+import { ReactComponent as Book4} from '../assets/image/icons/mulheres-que-correm-com-os-lobos.svg'
+import { ReactComponent as Book5} from '../assets/image/icons/o-pequeno-principe.svg'
+import { ReactComponent as Book6} from '../assets/image/icons/o-mal-estar-da-cultura.svg'
+import { ReactComponent as Book7} from '../assets/image/icons/um-ensaio-sobre-a-cegueira.svg'
+import { ReactComponent as Book8} from '../assets/image/icons/o-extraordinario.svg'
+import { ReactComponent as Book9} from '../assets/image/icons/o-quinze.svg'
+import { ReactComponent as Book10} from '../assets/image/icons/uma-breve-historia-do-tempo.svg'
+import { ReactComponent as Book11} from '../assets/image/icons/o-universo-numa-casca-de-noz.svg'
+import { ReactComponent as Book12} from '../assets/image/icons/frida.svg'
+import { ReactComponent as Book13} from '../assets/image/icons/sapiens.svg'
 
-import { ReactComponent as Linkedin} from '../assets/image/linkedin.svg'
-import { ReactComponent as GitHub} from '../assets/image/github.svg'
-import { ReactComponent as Instagram} from '../assets/image/instagram.svg'
+import { ReactComponent as Linkedin} from '../assets/image/icons/linkedin.svg'
+import { ReactComponent as GitHub} from '../assets/image/icons/github.svg'
+import { ReactComponent as Instagram} from '../assets/image/icons/instagram.svg'
 
-import { ReactComponent as Painel} from '../assets/image/painel.svg'
-import { ReactComponent as Coffee} from '../assets/image/coffee.svg'
-import { ReactComponent as Note} from '../assets/image/note.svg'
-import { ReactComponent as Polaroid1} from '../assets/image/polaroid-one.svg'
-import { ReactComponent as Polaroid2} from '../assets/image/polaroid-two.svg'
-import { ReactComponent as Polaroid3} from '../assets/image/polaroid-three.svg'
-import { ReactComponent as Polaroid4} from '../assets/image/polaroid-four.svg'
-import { ReactComponent as Polaroid5} from '../assets/image/polaroid-five.svg'
+import { ReactComponent as Painel} from '../assets/image/icons/painel.svg'
+import { ReactComponent as Coffee} from '../assets/image/icons/coffee.svg'
+import { ReactComponent as Note} from '../assets/image/icons/note.svg'
+import { ReactComponent as Polaroid1} from '../assets/image/icons/polaroid-one.svg'
+import { ReactComponent as Polaroid2} from '../assets/image/icons/polaroid-two.svg'
+import { ReactComponent as Polaroid3} from '../assets/image/icons/polaroid-three.svg'
+import { ReactComponent as Polaroid4} from '../assets/image/icons/polaroid-four.svg'
+import { ReactComponent as Polaroid5} from '../assets/image/icons/polaroid-five.svg'
 
 
 
-import Paint from '../assets/image/paint.png'
+import Paint from '../assets/image/icons/paint.png'
 
 
 
 export default function Home(){
     const [modal, setModal] = useState(false)
+    const [type, setType] = useState(false)
+
 
     return (
                 <S.Container>
                     { modal && (
-                        <Modal setModal={setModal}>
-                     </Modal>)}
+                        <Modal setModal={setModal} type='Computer'>
+                           { type ==='Computer' ? (<Computer setModal={setModal}/>) : null}
+                           { type ==='Galery' ? (<Galery setModal={setModal}/>):null}
+
+                        </Modal>)}
+                                
                     <Room className='component' />
                     <S.Left>
                         <Painel className='painel' />
-                        <Polaroid1 className='polaroid p-one' />
-                        <Polaroid2 className='polaroid p-two' />
-                        <Polaroid3 className='polaroid p-three' />
-                        <Polaroid4 className='polaroid p-four' />
-                        <Polaroid5 className='polaroid p-five' />
+                        <Polaroid1 
+                            onClick={() => {
+                                setType('Galery')
+                                setModal(true)}}
+                            className='polaroid p-zero' 
+                        />
+                        <Polaroid2 
+                            onClick={() => {
+                                setType('Galery')
+                                setModal(true)}}
+                                className='polaroid p-one' 
+                        />
+                        <Polaroid3 
+                            onClick={() => {
+                                setType('Galery')
+                                setModal(true)}}
+                                className='polaroid p-two' 
+                        />
+                        <Polaroid4 
+                            onClick={() => {
+                                setType('Galery')
+                                setModal(true)}}
+                                className='polaroid p-three' 
+                        />
+                        <Polaroid5 
+                            onClick={() => {
+                                setType('Galery')
+                                setModal(true)}}                            
+                            className='polaroid p-four' 
+                        />
+                            
                         <a href='https://www.buymeacoffee.com/luanalessa' rel='noreferrer' target='_blank' ><Note className='note' />
                         <Coffee className='coffee' /></a>
                     </S.Left>
                     <S.Center>
                         <Boards className='boards' />
-                        <Computer className='computer'  
-                            onClick={() => setModal(true)}
+                        <Monitor className='computer'  
+                            onClick={() => {
+                                setType('Computer')
+                                setModal(true)}}
                         />
                     </S.Center>
                     <S.Right>

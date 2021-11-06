@@ -7,9 +7,9 @@ import Projects from '../Projects'
 import WorkingOn from '../WorkingOn'
 
 
-import {ReactComponent as Minimize} from '../../assets/image/minimize.svg'
-import {ReactComponent as Maximize} from '../../assets/image/maximize.svg'
-import {ReactComponent as Close} from '../../assets/image/close.svg'
+import {ReactComponent as Minimize} from '../../assets/image/icons/minimize.svg'
+import {ReactComponent as Maximize} from '../../assets/image/icons/maximize.svg'
+import {ReactComponent as Close} from '../../assets/image/icons/close.svg'
 
 
 export default function Window({setModal, title, component}) {

@@ -5,20 +5,6 @@ import folder from '../../assets/image/icons/folder-off.png'
 import menu from '../../assets/image/icons/menu.svg'
 
 
-export const BackgroundContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background: rgba(20, 23, 56, 0.76);
-  z-index: 10;
-`
-
 export const ModalContainer = styled.div`
   width: 874px;
   height: 540px;

@@ -47,6 +47,7 @@ export default function WorkingOn({disabled}) {
                   title={p.title}
                   disabled={disabled}
                   onOpen={setNavigateFolder}
+                  key={navigateFolder}
                 /> 
               </S.Link>  
             ))}
