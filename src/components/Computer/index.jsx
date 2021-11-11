@@ -1,10 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { MenuContext } from '../../providers/MenuProvider'
 
 import * as S from './styles'
 import Desktop from '../Desktop'
 import Clock from '../Clock'
 
+const selected = {
+    backgroundColor: '#31509A',  
+    borderRadius: '10px',
+  }
+
 export default function Computer({ setModal, children }) {
+    const { isFolder, isChrome, handleMenu } = useContext(MenuContext)
+    
     return (
         <S.ModalContainer>
             <S.Header> 
@@ -17,8 +25,8 @@ export default function Computer({ setModal, children }) {
             </S.Header>
             <S.Content>
                 <S.Menu>
-                    <S.Icons className='chickable folder'/>
-                    <S.Icons className='chickable chrome'/>
+                    <S.Icons className={ `chickable folder ${isFolder}` }/>
+                    <S.Icons className={ `chickable chrome ${isChrome}` }/>
                     <S.Icons className='menu'/>
                 </S.Menu>
                   <Desktop />

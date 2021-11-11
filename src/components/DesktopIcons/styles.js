@@ -11,7 +11,6 @@ export const Icon = styled.div`
 
     background-size: cover;
 
-    
     &.folder{
       background-image: url(${folder});
     }

@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 
 export const Content = styled.div`
-  width: 574px;
-  height: 390px;
+  width: 100%;
+  height: 90%;
 
   background: #fff;
   
@@ -13,6 +13,8 @@ export const Content = styled.div`
   justify-content: flex-start;
   align-content: flex-start;
   z-index: 15;
+
+  overflow: auto;
 `
 
 export const Header = styled.div`

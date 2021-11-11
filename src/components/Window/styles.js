@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   width: 574px;
-  height: auto;
+  height: 390px;
 
   background: #fff;
   box-shadow: 1px 1px 6px #b1b1b16e;
@@ -18,7 +18,7 @@ export const Content = styled.div`
 `
 
 export const Header = styled.div`
-  width: 574px;
+  width: 100%;
   height: 30px;
 
   background: #2C3F7B;
@@ -46,7 +46,6 @@ export const Label = styled.label`
 
     .btn{
       margin: 0 10px;
-      cursor: pointer;
     }
     
     .close{
@@ -54,4 +53,7 @@ export const Label = styled.label`
       height: 14px;
     }
 
+    .clickable{
+      cursor: pointer;
+    }
 `

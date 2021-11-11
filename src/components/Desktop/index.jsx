@@ -1,5 +1,4 @@
-import React, {useState} from 'react'
-
+import React, {useContext, useState} from 'react'
 
 import * as S from './styles'
 import DesktopIcon from '../DesktopIcons'
@@ -18,6 +17,7 @@ export default function Desktop() {
                   setModal={setNavigateProjects} 
                   title="Projects" 
                   component='Projects'
+                  key='Projects'
                   >
                 </Window>
             )}
@@ -25,7 +25,9 @@ export default function Desktop() {
                 <Window 
                   setModal={setNavigateWorkingOn} 
                   title="Working On" 
-                  component='Working On'>
+                  component='Working On'
+                  key='Working on'
+                  >
                 </Window>
             )}
 
@@ -34,17 +36,25 @@ export default function Desktop() {
                 className='chickable'
                 icon = 'folder'
                 title='Projects'
+                key='Projects icon'
+
               />
               <DesktopIcon 
                 onOpen={setNavigateWorkingOn} 
                 className='chickable'
                 icon = 'folder'
                 title=' Working on'
+                key='Working on icon'
+
+               
               />
-              <DesktopIcon 
+              <DesktopIcon
                 className='chickable'
                 icon = 'cv'
                 title=' Resume'
+                key='Resume icon'
+
+                
               />              
             </S.Content>
     )

@@ -16,4 +16,6 @@ export const Content = styled.div`
   position: relative;
   z-index: 14;
 
+  overflow: hidden;
+
 `

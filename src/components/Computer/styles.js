@@ -86,14 +86,18 @@ export const Icons = styled.div`
     height: 60px;
     background-size: cover;
 
+
     &.folder{
         background-image: url(${folder});
         cursor: pointer;
         margin-top: 10px;
     }
+    
     &.chrome{
         background-image: url(${chrome});
         cursor: pointer;
+        margin-top: 10px;
+
     }
     &.chickable:hover{
         background-color: #31509A;       
