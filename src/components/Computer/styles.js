@@ -97,12 +97,13 @@ export const Icons = styled.div`
         background-image: url(${chrome});
         cursor: pointer;
         margin-top: 10px;
-
     }
+
     &.chickable:hover{
         background-color: #31509A;       
         border-radius: 10px;
     }
+    
     &.menu{
         width: 30px;
         height: 28px;

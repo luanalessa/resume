@@ -3,7 +3,7 @@ import Draggable from "react-draggable";
 
 import * as S from './styles'
 
-export default function DesktopIcons({ className, icon, title, onOpen, disabled, key}){
+export default function DesktopIcons({ className, icon, title, onOpen, disabled, key, setMenu}){
     const [isCommandHandled, setIsCommandHandled] = useState(false);
     const [ buttonPressTimer, setButtonPressTimer ] = useState(false);
 
@@ -25,7 +25,7 @@ export default function DesktopIcons({ className, icon, title, onOpen, disabled,
         disabled={disabled}
         onMouseDown={(e) => handleButtonPress(e)}
         >
-        <S.IconDesktop key={key} className={className} onClick={()=> isCommandHandled ? onOpen(false) : onOpen(true)} >
+        <S.IconDesktop key={key} className={className} onClick={()=> isCommandHandled ? onOpen(false) : onOpen(true) && setMenu()} >
             <S.Icon className={icon} />
             {title}
             </S.IconDesktop>

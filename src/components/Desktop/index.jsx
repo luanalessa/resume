@@ -1,11 +1,12 @@
 import React, {useContext, useState} from 'react'
+import {MenuContext} from '../../providers/MenuProvider'
 
 import * as S from './styles'
 import DesktopIcon from '../DesktopIcons'
 import Window from '../Window'
-// import Chrome from '../Chrome'
 
 export default function Desktop() {
+  const  {isFolder, isChrome, handleMenu}  = useContext(MenuContext)
   const [navigateProjects, setNavigateProjects] = useState(false)
   const [navigateWorkingOn, setNavigateWorkingOn] = useState(false)
 
@@ -23,7 +24,7 @@ export default function Desktop() {
             )}
             { navigateWorkingOn && (
                 <Window 
-                  setModal={setNavigateWorkingOn} 
+                  setModal={setNavigateWorkingOn}
                   title="Working On" 
                   component='Working On'
                   key='Working on'
@@ -32,7 +33,8 @@ export default function Desktop() {
             )}
 
               <DesktopIcon 
-                onOpen={setNavigateProjects} 
+                onOpen={setNavigateProjects}
+                setMenu={handleMenu('folder')}  
                 className='chickable'
                 icon = 'folder'
                 title='Projects'
@@ -40,7 +42,8 @@ export default function Desktop() {
 
               />
               <DesktopIcon 
-                onOpen={setNavigateWorkingOn} 
+                onOpen={setNavigateWorkingOn}
+                setMenu={handleMenu('folder')}  
                 className='chickable'
                 icon = 'folder'
                 title=' Working on'
@@ -49,6 +52,7 @@ export default function Desktop() {
                
               />
               <DesktopIcon
+                setMenu={handleMenu('chrome')} 
                 className='chickable'
                 icon = 'cv'
                 title=' Resume'
