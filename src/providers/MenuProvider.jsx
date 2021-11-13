@@ -27,8 +27,14 @@ export const MenuProvider = (props) => {
             setIsFolder({...isFolder, projects : false})
         }else if( selected === 'workingOn'){
             setIsFolder({...isFolder, workingOn : false})
-        }else {
+        }else if( selected === 'chrome') {
             setIsFolder({...isFolder, chrome : false})
+        }else{
+            setIsFolder({...isFolder, 
+                projects : false,
+                workingOn: false,
+                chrome: false
+            })
         }
     }
 

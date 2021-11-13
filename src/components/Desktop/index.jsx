@@ -3,10 +3,13 @@ import React, {useState} from 'react'
 import * as S from './styles'
 import DesktopIcon from '../DesktopIcons'
 import Window from '../Window'
+import Chrome from '../Chrome'
 
 export default function Desktop() {
   const [navigateProjects, setNavigateProjects] = useState(false)
   const [navigateWorkingOn, setNavigateWorkingOn] = useState(false)
+  const [navigateChrome, setChrome] = useState(false)
+
 
  
     return (
@@ -31,6 +34,16 @@ export default function Desktop() {
                   >
                 </Window>
             )}
+            { navigateChrome && (
+                <Chrome 
+                  setModal={setChrome}
+                  title="" 
+                  component='Chrome'
+                  key='Chrome'
+                  menu='chrome'
+                  >
+                </Chrome>
+            )}
 
               <DesktopIcon 
                 onOpen={setNavigateProjects}
@@ -52,9 +65,10 @@ export default function Desktop() {
                
               />
               <DesktopIcon
+                onOpen={setChrome}
                 className='chickable'
                 icon = 'cv'
-                title=' Resume'
+                title='Resume'
                 key='Resume icon'   
                 folder='chrome'
 

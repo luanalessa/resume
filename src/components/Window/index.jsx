@@ -8,6 +8,8 @@ import * as S from './styles'
 
 import Projects from '../Projects'
 import WorkingOn from '../WorkingOn'
+import Chrome from '../Chrome'
+
 import {MenuContext} from '../../providers/MenuProvider'
 
 
@@ -66,6 +68,8 @@ export default function Window({setModal, title, component, menu}) {
               </S.Header>
              { component === 'Projects' && <Projects key='' disabled={true}/> }
              { component === 'Working On' && <WorkingOn key='' disabled={true}/> }
+             { component === 'Chrome' && <Chrome key='' disabled={true}/> }
+
           </Resizable>  
       </Draggable>
     )

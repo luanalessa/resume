@@ -7,9 +7,9 @@ export default function Clock(){
     const [day] = useState(new Date().getDay())
    
 
-    // const [time, setTime] = useState(setInterval(() => {
-    //     setTime(new Date().toLocaleTimeString(),1000)
-    // }));
+    const [time, setTime] = useState(setInterval(() => {
+        setTime(new Date().toLocaleTimeString(),1000)
+    }));
     
-    return <S.Label> { month } { day } {  } </S.Label>
+    return <S.Label> { month } { day } { time } </S.Label>
 }

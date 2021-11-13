@@ -11,7 +11,7 @@ const selected = {
   }
 
 export default function Computer({ setModal, children }) {
-    const { isFolder } = useContext(MenuContext)
+    const { isFolder, closeMenu } = useContext(MenuContext)
     console.log(isFolder.workingOn)
     
     return (
@@ -22,7 +22,7 @@ export default function Computer({ setModal, children }) {
                   <Clock/>
                 </S.Label>
                 <S.Label >
-                <i onClick={() => setModal(false)} className='bx bx-power-off' ></i></S.Label>
+                <i onClick={() => {setModal(false); closeMenu()}} className='bx bx-power-off' ></i></S.Label>
             </S.Header>
             <S.Content>
                 <S.Menu>
