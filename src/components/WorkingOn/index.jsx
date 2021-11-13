@@ -40,13 +40,18 @@ export default function WorkingOn({disabled}) {
               <S.Link 
               href={p.href} 
               rel='noreferrer' 
-              target='_blank'>  
+              target='_blank'
+              key={p.title}
+
+              >  
                 <DesktopIcon 
                   className= {p.className}
                   icon = {p.icon}
                   title={p.title}
                   disabled={disabled}
                   onOpen={setNavigateFolder}
+                  key={p.icon}
+
                 /> 
               </S.Link>  
             ))}

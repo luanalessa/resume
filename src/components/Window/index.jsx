@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import Draggable from "react-draggable";
 import { Resizable } from "re-resizable";
 
@@ -8,6 +8,7 @@ import * as S from './styles'
 
 import Projects from '../Projects'
 import WorkingOn from '../WorkingOn'
+import {MenuContext} from '../../providers/MenuProvider'
 
 
 import {ReactComponent as Minimize} from '../../assets/image/icons/minimize.svg'
@@ -33,7 +34,9 @@ const size = {
   height:390,
 }
 
-export default function Window({setModal, title, component, key}) {
+export default function Window({setModal, title, component, menu}) {
+  const  {closeMenu}  = useContext(MenuContext)
+
     return (
       <Draggable bounds='parent'
         defaultPosition={{x: 100, y: 20}}>
@@ -45,18 +48,24 @@ export default function Window({setModal, title, component, key}) {
 
             maxWidth={778}
             maxHeight={480}
-            key={key}
+            key='Window Desktop'
             >
               <S.Header>
                 <S.Label>{title}</S.Label>
                 <S.Label>
                   <Minimize className='btn minimize' />
                   <Maximize className='btn maximize'/>
-                  <Close className='btn clickable close' onClick={()=> setModal(false)}/>
+                  <Close 
+                    className='btn clickable close'
+                    onClick={()=> {
+                      setModal(false)
+                      closeMenu(menu)
+                    }
+                      }/>
                 </S.Label>
               </S.Header>
-             { component === 'Projects' && <Projects disabled={true}/> }
-             { component === 'Working On' && <WorkingOn disabled={true}/> }
+             { component === 'Projects' && <Projects key='' disabled={true}/> }
+             { component === 'Working On' && <WorkingOn key='' disabled={true}/> }
           </Resizable>  
       </Draggable>
     )

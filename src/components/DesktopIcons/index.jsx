@@ -1,9 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Draggable from "react-draggable";
+
+import {MenuContext} from '../../providers/MenuProvider'
+
 
 import * as S from './styles'
 
-export default function DesktopIcons({ className, icon, title, onOpen, disabled, key, setMenu}){
+export default function DesktopIcons({ folder, className, icon, title, onOpen, disabled}){
+    const  {handleMenu}  = useContext(MenuContext)
+
     const [isCommandHandled, setIsCommandHandled] = useState(false);
     const [ buttonPressTimer, setButtonPressTimer ] = useState(false);
 
@@ -18,6 +23,10 @@ export default function DesktopIcons({ className, icon, title, onOpen, disabled,
         clearTimeout(buttonPressTimer);
       };
     
+      const onMenuModal = (menu) => {
+        onOpen(true); 
+        handleMenu(menu);
+      }
     
     return ( 
         <Draggable
@@ -25,9 +34,11 @@ export default function DesktopIcons({ className, icon, title, onOpen, disabled,
         disabled={disabled}
         onMouseDown={(e) => handleButtonPress(e)}
         >
-        <S.IconDesktop key={key} className={className} onClick={()=> isCommandHandled ? onOpen(false) : onOpen(true) && setMenu()} >
+        <S.IconDesktop key='icon' className={className} onClick={()=> 
+            isCommandHandled ? 
+                onOpen(false)  : onMenuModal(folder) }>
             <S.Icon className={icon} />
-            {title}
+                {title}
             </S.IconDesktop>
         </Draggable>
 

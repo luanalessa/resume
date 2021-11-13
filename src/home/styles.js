@@ -23,6 +23,16 @@ export const Painting = styled.div`
 
   margin-top: 30px;
 
+  animation: animate 0.3s;
+
+  @keyframes animate {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 
 `
 

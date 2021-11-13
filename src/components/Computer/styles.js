@@ -99,7 +99,7 @@ export const Icons = styled.div`
         margin-top: 10px;
     }
 
-    &.chickable:hover{
+    &.clickable:hover{
         background-color: #31509A;       
         border-radius: 10px;
     }

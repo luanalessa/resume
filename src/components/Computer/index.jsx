@@ -11,7 +11,8 @@ const selected = {
   }
 
 export default function Computer({ setModal, children }) {
-    const { isFolder, isChrome } = useContext(MenuContext)
+    const { isFolder } = useContext(MenuContext)
+    console.log(isFolder.workingOn)
     
     return (
         <S.ModalContainer>
@@ -26,10 +27,12 @@ export default function Computer({ setModal, children }) {
             <S.Content>
                 <S.Menu>
                     <S.Icons 
-                      className={ `chickable folder ${isFolder}` }
-                      style={isChrome ? selected : null }  
-                    />
-                    <S.Icons className={ `chickable chrome ${isChrome}` }/>
+                      className={ 'clickable folder' }
+                      style={isFolder.projects || isFolder.workingOn ? selected : null} /> 
+                    <S.Icons
+                      className={ 'clickable chrome' }
+                      style={isFolder.chrome ? selected : null} 
+                      />
                     <S.Icons className='menu'/>
                 </S.Menu>
                   <Desktop />
