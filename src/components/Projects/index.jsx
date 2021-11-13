@@ -49,7 +49,7 @@ const projects = [
 ]
 
 export default function Projects({disabled}) {
-  const [navigateFolder, setNavigateFolder] = useState(false)
+  const [setNavigateFolder] = useState(false)
     return (
             <S.Content>
             {projects.map(p => (

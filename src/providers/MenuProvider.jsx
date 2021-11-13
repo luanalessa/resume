@@ -9,8 +9,6 @@ export const MenuProvider = (props) => {
         chrome: false
     })  
 
-
-
     const handleMenu = (selected) =>{
         console.log(selected)
         if(selected === 'projects') {
@@ -25,7 +23,6 @@ export const MenuProvider = (props) => {
     }
 
     const closeMenu = (selected) =>{
-        console.log(selected)
         if(selected === 'projects') {
             setIsFolder({...isFolder, projects : false})
         }else if( selected === 'workingOn'){
@@ -33,7 +30,6 @@ export const MenuProvider = (props) => {
         }else {
             setIsFolder({...isFolder, chrome : false})
         }
-        console.log(isFolder.projects)
     }
 
     return(

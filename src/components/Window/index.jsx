@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import Draggable from "react-draggable";
 import { Resizable } from "re-resizable";
 
