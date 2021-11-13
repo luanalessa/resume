@@ -1,4 +1,4 @@
-<h1 align="center"> Portfolio </h1>
+<h1 align="center"> Resume </h1>
 
 
 <p align="center">
